@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f3ee">
+  <meta name="description" content="Conheça o trabalho da psicóloga Júlia Yohanna Magalhães e entre em contato para informações sobre atendimento psicológico.">
+  <title>Júlia Yohanna Magalhães | Psicóloga</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --cream: #f7f3ee;
+      --paper: #fffdf9;
+      --ink: #38332e;
+      --muted: #756d64;
+      --brown: #806b59;
+      --brown-dark: #5e4d40;
+      --sage: #dfe5dc;
+      --line: #e9e1d8;
+      --white: #fff;
+      --shadow: 0 18px 50px rgba(69, 55, 42, .08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1120px, calc(100% - 44px)); margin: 0 auto; }
+    header {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(255,253,249,.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(233,225,216,.8);
+    }
+    .nav { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { font-family: "Playfair Display", serif; font-size: 21px; line-height: 1.15; color: var(--brown-dark); }
+    .brand small { display: block; font: 10px "DM Sans", sans-serif; letter-spacing: 3px; text-transform: uppercase; margin-top: 5px; color: var(--muted); }
+    .links { display: flex; gap: 28px; align-items: center; font-size: 13px; color: var(--muted); }
+    .links a:hover { color: var(--brown-dark); }
+    .button {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 13px 21px; border-radius: 999px; background: var(--brown);
+      color: white; font-weight: 600; font-size: 13px; transition: .2s;
+      box-shadow: 0 8px 20px rgba(128,107,89,.18);
+    }
+    .button:hover { background: var(--brown-dark); transform: translateY(-1px); }
+    .hero { background: var(--cream); overflow: hidden; }
+    .hero-grid { min-height: 610px; display: grid; grid-template-columns: 1.05fr .95fr; align-items: center; gap: 55px; padding-top: 55px; padding-bottom: 65px; }
+    .eyebrow { color: var(--brown); text-transform: uppercase; letter-spacing: 3px; font-size: 11px; font-weight: 700; }
+    h1, h2, h3 { font-family: "Playfair Display", serif; font-weight: 500; line-height: 1.18; }
+    h1 { font-size: clamp(42px, 5.5vw, 66px); margin: 18px 0 20px; max-width: 620px; }
+    .hero p { color: var(--muted); max-width: 500px; font-size: 16px; margin-bottom: 30px; }
+    .hero-note { margin-top: 18px; color: #887e73; font-size: 12px; }
+    .hero-visual { position: relative; min-height: 440px; display: flex; align-items: center; justify-content: center; }
+    .photo-frame {
+      width: min(390px, 100%); height: 455px; border-radius: 48% 48% 18px 18px;
+      background: linear-gradient(145deg, #e6ddd2, #cfc0ae);
+      overflow: hidden; box-shadow: var(--shadow); position: relative;
+    }
+    .photo-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .photo-placeholder {
+      height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center;
+      text-align: center; padding: 35px; color: var(--brown-dark);
+      background: radial-gradient(circle at 50% 35%, #f5eee5 0, #e5d9cb 58%, #cdbba8 100%);
+    }
+    .photo-placeholder span { font-family: "Playfair Display", serif; font-size: 34px; }
+    .photo-placeholder small { margin-top: 10px; letter-spacing: 2px; text-transform: uppercase; font-size: 9px; }
+    .floating-note { position: absolute; bottom: 28px; left: -25px; background: var(--paper); padding: 18px 22px; border-radius: 14px; box-shadow: var(--shadow); font-family: "Playfair Display", serif; color: var(--brown-dark); }
+    section { padding: 95px 0; }
+    .section-head { max-width: 650px; margin: 0 auto 48px; text-align: center; }
+    .section-head h2 { font-size: clamp(32px, 4vw, 43px); margin: 12px 0; }
+    .section-head p { color: var(--muted); margin: 0; }
+    .about-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 75px; align-items: center; }
+    .about-mark { min-height: 340px; border-radius: 18px; background: var(--sage); display: grid; place-items: center; padding: 35px; text-align: center; }
+    .about-mark span { font-family: "Playfair Display", serif; font-size: 34px; color: #64715f; }
+    .about-copy h2 { font-size: 42px; margin: 12px 0 20px; }
+    .about-copy p { color: var(--muted); }
+    .soft { background: var(--cream); }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .card { background: var(--paper); padding: 30px; border: 1px solid var(--line); border-radius: 16px; }
+    .card .num { color: var(--brown); font-family: "Playfair Display", serif; font-size: 27px; }
+    .card h3 { font-size: 23px; margin: 13px 0 10px; }
+    .card p { color: var(--muted); font-size: 14px; margin: 0; }
+    .quote { max-width: 760px; margin: auto; text-align: center; }
+    .quote p { font: 27px/1.5 "Playfair Display", serif; color: var(--brown-dark); }
+    .contact-box { background: var(--sage); border-radius: 22px; padding: 60px 35px; text-align: center; }
+    .contact-box h2 { font-size: clamp(32px, 4vw, 44px); margin: 12px 0; }
+    .contact-box p { color: #667060; max-width: 540px; margin: 0 auto 25px; }
+    footer { padding: 30px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .whatsapp-float { position: fixed; right: 20px; bottom: 20px; z-index: 20; border-radius: 999px; padding: 14px 19px; background: #557b5b; color: white; font-size: 13px; font-weight: 700; box-shadow: 0 8px 24px rgba(0,0,0,.18); }
+    @media (max-width: 760px) {
+      .wrap { width: min(100% - 34px, 560px); }
+      .nav { min-height: 68px; }
+      .links { display: none; }
+      .hero-grid { grid-template-columns: 1fr; gap: 20px; padding-top: 65px; }
+      .hero-visual { min-height: 360px; }
+      .photo-frame { height: 365px; width: min(310px, 88%); }
+      .floating-note { left: 0; bottom: 10px; }
+      section { padding: 70px 0; }
+      .about-grid { grid-template-columns: 1fr; gap: 35px; }
+      .about-mark { min-height: 230px; }
+      .cards { grid-template-columns: 1fr; }
+      .contact-box { padding: 45px 22px; }
+      .whatsapp-float { right: 13px; bottom: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#inicio">Júlia Yohanna Magalhães<small>Psicóloga</small></a>
+      <nav class="links" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#atendimento">Atendimento</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a class="button" href="https://wa.me/5513974262561?text=Ol%C3%A1%21%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20atendimentos%20da%20psic%C3%B3loga%20J%C3%BAlia." target="_blank" rel="noopener">Fale comigo</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Psicologia • Escuta • Acolhimento</div>
+          <h1>Um espaço para cuidar de você.</h1>
+          <p>Um convite para olhar para sua história com atenção, respeito e acolhimento. A psicoterapia pode ser um caminho de autoconhecimento e cuidado emocional.</p>
+          <a class="button" href="https://wa.me/5513974262561?text=Ol%C3%A1%21%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20atendimentos%20da%20psic%C3%B3loga%20J%C3%BAlia." target="_blank" rel="noopener">Agendar uma conversa</a>
+          <div class="hero-note">Entre em contato para saber mais sobre os atendimentos.</div>
+        </div>
+        <div class="hero-visual">
+          <div class="photo-frame">
+            <div class="photo-placeholder"><span>Júlia Yohanna</span><small>Psicóloga</small></div>
+          </div>
+          <div class="floating-note">Você merece ser ouvido(a).</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="wrap about-grid">
+        <div class="about-mark"><span>Escuta cuidadosa<br>e sem julgamentos</span></div>
+        <div class="about-copy">
+          <div class="eyebrow">Prazer, sou a Júlia</div>
+          <h2>Um cuidado construído em conjunto.</h2>
+          <p>Sou Júlia Yohanna Magalhães, psicóloga. Acredito na importância de um espaço de escuta ética e acolhedora, onde cada pessoa possa falar sobre suas experiências no próprio tempo.</p>
+          <p>O processo terapêutico é construído de forma individual, considerando a história, as necessidades e os objetivos de cada pessoa.</p>
+          <p><strong>CRP:</strong> inserir número de registro profissional antes da publicação.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="soft" id="atendimento">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Como funciona</div>
+          <h2>Um processo no seu ritmo.</h2>
+          <p>O primeiro passo é conversar para entender suas dúvidas e conhecer as possibilidades de atendimento.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="num">01</div><h3>Contato inicial</h3><p>Você pode enviar uma mensagem para tirar dúvidas sobre o atendimento, horários e formato disponível.</p></article>
+          <article class="card"><div class="num">02</div><h3>Escuta e acolhimento</h3><p>O espaço terapêutico é construído com respeito, sigilo profissional e atenção à sua individualidade.</p></article>
+          <article class="card"><div class="num">03</div><h3>Processo terapêutico</h3><p>Os encontros são conduzidos de acordo com as necessidades e os objetivos definidos ao longo do processo.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap quote">
+        <div class="eyebrow">Um passo de cada vez</div>
+        <p>“Cuidar de si também é reconhecer que você não precisa dar conta de tudo sozinho(a).”</p>
+      </div>
+    </section>
+
+    <section class="soft" id="contato">
+      <div class="wrap">
+        <div class="contact-box">
+          <div class="eyebrow">Vamos conversar?</div>
+          <h2>Estou à disposição para receber sua mensagem.</h2>
+          <p>Entre em contato pelo WhatsApp para solicitar informações sobre os atendimentos da psicóloga Júlia Yohanna Magalhães.</p>
+          <a class="button" href="https://wa.me/5513974262561?text=Ol%C3%A1%21%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20atendimentos%20da%20psic%C3%B3loga%20J%C3%BAlia." target="_blank" rel="noopener">Conversar pelo WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© <span id="year"></span> Júlia Yohanna Magalhães • Psicóloga</span>
+      <span>Conteúdo informativo. O atendimento depende de agendamento prévio.</span>
+    </div>
+  </footer>
+  <a class="whatsapp-float" href="https://wa.me/5513974262561?text=Ol%C3%A1%21%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20atendimentos%20da%20psic%C3%B3loga%20J%C3%BAlia." target="_blank" rel="noopener" aria-label="Falar com Júlia pelo WhatsApp">WhatsApp</a>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
